@@ -13,6 +13,7 @@
 typedef enum {
     GHTreeNodeType_Tree = 0,
     GHTreeNodeType_Blob = 1,
+    GHTreeNodeType_Commit = 2,
 } GHTreeNodeType;
 
 @interface BBUGitHubTreeNode : BBUGitHubTreeOwner

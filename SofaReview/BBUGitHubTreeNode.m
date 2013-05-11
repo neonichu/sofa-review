@@ -47,6 +47,11 @@
         return GHTreeNodeType_Tree;
     }
     
+    // FIXME: When does this come up?
+    if ([string isEqualToString:@"commit"]) {
+        return GHTreeNodeType_Commit;
+    }
+    
     NSAssert(false, @"Unknown type: %@", string);
     return -1;
 }
