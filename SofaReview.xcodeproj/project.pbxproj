@@ -51,6 +51,14 @@
 		86D7D343173E727100E2A2D1 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86D7D342173E727000E2A2D1 /* OpenGLES.framework */; };
 		86D7D346173E743700E2A2D1 /* NICSignatureViewQuartzQuadratic.m in Sources */ = {isa = PBXBuildFile; fileRef = 86D7D345173E743700E2A2D1 /* NICSignatureViewQuartzQuadratic.m */; };
 		86D7D348173E76C400E2A2D1 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86D7D347173E76C400E2A2D1 /* AssetsLibrary.framework */; };
+		86D7D351173E7C7300E2A2D1 /* Icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = 86D7D349173E7C7300E2A2D1 /* Icon-72.png */; };
+		86D7D352173E7C7300E2A2D1 /* Icon-72@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 86D7D34A173E7C7300E2A2D1 /* Icon-72@2x.png */; };
+		86D7D353173E7C7300E2A2D1 /* Icon-Small-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 86D7D34B173E7C7300E2A2D1 /* Icon-Small-50.png */; };
+		86D7D354173E7C7300E2A2D1 /* Icon-Small-50@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 86D7D34C173E7C7300E2A2D1 /* Icon-Small-50@2x.png */; };
+		86D7D355173E7C7300E2A2D1 /* Icon-Small.png in Resources */ = {isa = PBXBuildFile; fileRef = 86D7D34D173E7C7300E2A2D1 /* Icon-Small.png */; };
+		86D7D356173E7C7300E2A2D1 /* Icon-Small@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 86D7D34E173E7C7300E2A2D1 /* Icon-Small@2x.png */; };
+		86D7D357173E7C7300E2A2D1 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 86D7D34F173E7C7300E2A2D1 /* Icon.png */; };
+		86D7D358173E7C7300E2A2D1 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 86D7D350173E7C7300E2A2D1 /* Icon@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -165,6 +173,14 @@
 		86D7D344173E743700E2A2D1 /* NICSignatureViewQuartzQuadratic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NICSignatureViewQuartzQuadratic.h; path = vendor/SignatureDemo/SignatureDemo/NICSignatureViewQuartzQuadratic.h; sourceTree = "<group>"; };
 		86D7D345173E743700E2A2D1 /* NICSignatureViewQuartzQuadratic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NICSignatureViewQuartzQuadratic.m; path = vendor/SignatureDemo/SignatureDemo/NICSignatureViewQuartzQuadratic.m; sourceTree = "<group>"; };
 		86D7D347173E76C400E2A2D1 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
+		86D7D349173E7C7300E2A2D1 /* Icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-72.png"; path = "Resources/Icon-72.png"; sourceTree = "<group>"; };
+		86D7D34A173E7C7300E2A2D1 /* Icon-72@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-72@2x.png"; path = "Resources/Icon-72@2x.png"; sourceTree = "<group>"; };
+		86D7D34B173E7C7300E2A2D1 /* Icon-Small-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-Small-50.png"; path = "Resources/Icon-Small-50.png"; sourceTree = "<group>"; };
+		86D7D34C173E7C7300E2A2D1 /* Icon-Small-50@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-Small-50@2x.png"; path = "Resources/Icon-Small-50@2x.png"; sourceTree = "<group>"; };
+		86D7D34D173E7C7300E2A2D1 /* Icon-Small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-Small.png"; path = "Resources/Icon-Small.png"; sourceTree = "<group>"; };
+		86D7D34E173E7C7300E2A2D1 /* Icon-Small@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-Small@2x.png"; path = "Resources/Icon-Small@2x.png"; sourceTree = "<group>"; };
+		86D7D34F173E7C7300E2A2D1 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Icon.png; path = Resources/Icon.png; sourceTree = "<group>"; };
+		86D7D350173E7C7300E2A2D1 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon@2x.png"; path = "Resources/Icon@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -265,6 +281,14 @@
 		86D7D12D173E348C00E2A2D1 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				86D7D349173E7C7300E2A2D1 /* Icon-72.png */,
+				86D7D34A173E7C7300E2A2D1 /* Icon-72@2x.png */,
+				86D7D34B173E7C7300E2A2D1 /* Icon-Small-50.png */,
+				86D7D34C173E7C7300E2A2D1 /* Icon-Small-50@2x.png */,
+				86D7D34D173E7C7300E2A2D1 /* Icon-Small.png */,
+				86D7D34E173E7C7300E2A2D1 /* Icon-Small@2x.png */,
+				86D7D34F173E7C7300E2A2D1 /* Icon.png */,
+				86D7D350173E7C7300E2A2D1 /* Icon@2x.png */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -474,6 +498,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				86D7D326173E464900E2A2D1 /* Menlo.ttf in Resources */,
+				86D7D351173E7C7300E2A2D1 /* Icon-72.png in Resources */,
+				86D7D352173E7C7300E2A2D1 /* Icon-72@2x.png in Resources */,
+				86D7D353173E7C7300E2A2D1 /* Icon-Small-50.png in Resources */,
+				86D7D354173E7C7300E2A2D1 /* Icon-Small-50@2x.png in Resources */,
+				86D7D355173E7C7300E2A2D1 /* Icon-Small.png in Resources */,
+				86D7D356173E7C7300E2A2D1 /* Icon-Small@2x.png in Resources */,
+				86D7D357173E7C7300E2A2D1 /* Icon.png in Resources */,
+				86D7D358173E7C7300E2A2D1 /* Icon@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
