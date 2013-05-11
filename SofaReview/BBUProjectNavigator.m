@@ -68,6 +68,7 @@
     self = [super init];
     if (self) {
         self.loading = YES;
+#error Put your GitHub credentials here
         self.user = [GHGitHubUser userWithUsername:@"user" password:@"password"];
         self.client = [GHGitHubClient clientForUser:self.user];
         
