@@ -1,0 +1,12 @@
+[submodule "vendor/GHAPIDemo"]
+	path = vendor/GHAPIDemo
+	url = https://github.com/ReactiveCocoa/GHAPIDemo.git
+[submodule "vendor/MBProgressHUD"]
+	path = vendor/MBProgressHUD
+	url = https://github.com/jdg/MBProgressHUD.git
+[submodule "vendor/Chromatism"]
+	path = vendor/Chromatism
+	url = https://github.com/Anviking/Chromatism.git
+[submodule "vendor/Base64"]
+	path = vendor/Base64
+	url = https://github.com/nicklockwood/Base64.git

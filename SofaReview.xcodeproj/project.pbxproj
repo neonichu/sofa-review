@@ -12,7 +12,71 @@
 		86D7D115173E346500E2A2D1 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86D7D114173E346500E2A2D1 /* CoreGraphics.framework */; };
 		86D7D11D173E346500E2A2D1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 86D7D11C173E346500E2A2D1 /* main.m */; };
 		86D7D121173E346500E2A2D1 /* BBUAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 86D7D120173E346500E2A2D1 /* BBUAppDelegate.m */; };
+		86D7D13D173E360D00E2A2D1 /* GHGitHubClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 86D7D134173E360D00E2A2D1 /* GHGitHubClient.m */; };
+		86D7D13E173E360D00E2A2D1 /* GHGitHubObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 86D7D136173E360D00E2A2D1 /* GHGitHubObject.m */; };
+		86D7D13F173E360D00E2A2D1 /* GHGitHubOrg.m in Sources */ = {isa = PBXBuildFile; fileRef = 86D7D138173E360D00E2A2D1 /* GHGitHubOrg.m */; };
+		86D7D140173E360D00E2A2D1 /* GHGitHubTeam.m in Sources */ = {isa = PBXBuildFile; fileRef = 86D7D13A173E360D00E2A2D1 /* GHGitHubTeam.m */; };
+		86D7D141173E360D00E2A2D1 /* GHGitHubUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 86D7D13C173E360D00E2A2D1 /* GHGitHubUser.m */; };
+		86D7D158173E366A00E2A2D1 /* AFHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 86D7D144173E366A00E2A2D1 /* AFHTTPClient.m */; };
+		86D7D159173E366A00E2A2D1 /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 86D7D146173E366A00E2A2D1 /* AFHTTPRequestOperation.m */; };
+		86D7D15A173E366A00E2A2D1 /* AFImageRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 86D7D148173E366A00E2A2D1 /* AFImageRequestOperation.m */; };
+		86D7D15B173E366A00E2A2D1 /* AFJSONRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 86D7D14A173E366A00E2A2D1 /* AFJSONRequestOperation.m */; };
+		86D7D15D173E366A00E2A2D1 /* AFNetworkActivityIndicatorManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 86D7D14E173E366A00E2A2D1 /* AFNetworkActivityIndicatorManager.m */; };
+		86D7D15E173E366A00E2A2D1 /* AFPropertyListRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 86D7D151173E366A00E2A2D1 /* AFPropertyListRequestOperation.m */; };
+		86D7D15F173E366A00E2A2D1 /* AFURLConnectionOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 86D7D153173E366A00E2A2D1 /* AFURLConnectionOperation.m */; };
+		86D7D160173E366A00E2A2D1 /* AFXMLRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 86D7D155173E366A00E2A2D1 /* AFXMLRequestOperation.m */; };
+		86D7D161173E366A00E2A2D1 /* UIImageView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 86D7D157173E366A00E2A2D1 /* UIImageView+AFNetworking.m */; };
+		86D7D2FE173E386700E2A2D1 /* libReactiveCocoa-iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 86D7D2F9173E385200E2A2D1 /* libReactiveCocoa-iOS.a */; };
+		86D7D300173E39FE00E2A2D1 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86D7D2FF173E39FE00E2A2D1 /* SystemConfiguration.framework */; };
+		86D7D302173E3A0A00E2A2D1 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86D7D301173E3A0A00E2A2D1 /* MobileCoreServices.framework */; };
+		86D7D305173E3B6400E2A2D1 /* BBUProjectNavigator.m in Sources */ = {isa = PBXBuildFile; fileRef = 86D7D304173E3B6400E2A2D1 /* BBUProjectNavigator.m */; };
+		86D7D30C173E3C9100E2A2D1 /* EXTScope.m in Sources */ = {isa = PBXBuildFile; fileRef = 86D7D30B173E3C9100E2A2D1 /* EXTScope.m */; };
+		86D7D30F173E3D2000E2A2D1 /* BBUFileListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 86D7D30E173E3D2000E2A2D1 /* BBUFileListViewController.m */; };
+		86D7D312173E3FA800E2A2D1 /* BBUGitHubRepo.m in Sources */ = {isa = PBXBuildFile; fileRef = 86D7D311173E3FA800E2A2D1 /* BBUGitHubRepo.m */; };
+		86D7D317173E43C700E2A2D1 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 86D7D316173E43C700E2A2D1 /* MBProgressHUD.m */; };
+		86D7D321173E463D00E2A2D1 /* Helpers.m in Sources */ = {isa = PBXBuildFile; fileRef = 86D7D31A173E463D00E2A2D1 /* Helpers.m */; };
+		86D7D322173E463D00E2A2D1 /* JLTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 86D7D31C173E463D00E2A2D1 /* JLTextView.m */; };
+		86D7D323173E463D00E2A2D1 /* JLTokenizer.m in Sources */ = {isa = PBXBuildFile; fileRef = 86D7D31E173E463D00E2A2D1 /* JLTokenizer.m */; };
+		86D7D324173E463D00E2A2D1 /* TextLineCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 86D7D320173E463D00E2A2D1 /* TextLineCell.m */; };
+		86D7D326173E464900E2A2D1 /* Menlo.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 86D7D325173E464900E2A2D1 /* Menlo.ttf */; };
+		86D7D328173E465B00E2A2D1 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86D7D327173E465B00E2A2D1 /* CoreText.framework */; };
+		86D7D32B173E46A100E2A2D1 /* BBUCodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 86D7D32A173E46A100E2A2D1 /* BBUCodeViewController.m */; };
+		86D7D32E173E4A4A00E2A2D1 /* BBUFilesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 86D7D32D173E4A4A00E2A2D1 /* BBUFilesViewController.m */; };
+		86D7D331173E500B00E2A2D1 /* UIAlertView+BBU.m in Sources */ = {isa = PBXBuildFile; fileRef = 86D7D330173E500A00E2A2D1 /* UIAlertView+BBU.m */; };
+		86D7D334173E511F00E2A2D1 /* BBUGitHubTreeNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 86D7D333173E511F00E2A2D1 /* BBUGitHubTreeNode.m */; };
+		86D7D338173E558900E2A2D1 /* Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 86D7D337173E558900E2A2D1 /* Base64.m */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		86D7D2F6173E385200E2A2D1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 86D7D2EE173E385200E2A2D1 /* ReactiveCocoa.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 88037F8315056328001A5B19;
+			remoteInfo = ReactiveCocoa;
+		};
+		86D7D2F8173E385200E2A2D1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 86D7D2EE173E385200E2A2D1 /* ReactiveCocoa.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 88F440AB153DAC820097B4C3;
+			remoteInfo = "ReactiveCocoa-iOS";
+		};
+		86D7D2FA173E385200E2A2D1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 86D7D2EE173E385200E2A2D1 /* ReactiveCocoa.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 88CDF7DC15000FCF00163A9F;
+			remoteInfo = ReactiveCocoaTests;
+		};
+		86D7D2FC173E386100E2A2D1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 86D7D2EE173E385200E2A2D1 /* ReactiveCocoa.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 88F440AA153DAC820097B4C3;
+			remoteInfo = "ReactiveCocoa-iOS";
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		86D7D10D173E346500E2A2D1 /* SofaReview.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SofaReview.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -24,6 +88,69 @@
 		86D7D11E173E346500E2A2D1 /* SofaReview-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SofaReview-Prefix.pch"; sourceTree = "<group>"; };
 		86D7D11F173E346500E2A2D1 /* BBUAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BBUAppDelegate.h; sourceTree = "<group>"; };
 		86D7D120173E346500E2A2D1 /* BBUAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BBUAppDelegate.m; sourceTree = "<group>"; };
+		86D7D133173E360D00E2A2D1 /* GHGitHubClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GHGitHubClient.h; path = vendor/GHAPIDemo/GHAPIDemo/GHGitHubClient.h; sourceTree = "<group>"; };
+		86D7D134173E360D00E2A2D1 /* GHGitHubClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GHGitHubClient.m; path = vendor/GHAPIDemo/GHAPIDemo/GHGitHubClient.m; sourceTree = "<group>"; };
+		86D7D135173E360D00E2A2D1 /* GHGitHubObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GHGitHubObject.h; path = vendor/GHAPIDemo/GHAPIDemo/GHGitHubObject.h; sourceTree = "<group>"; };
+		86D7D136173E360D00E2A2D1 /* GHGitHubObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GHGitHubObject.m; path = vendor/GHAPIDemo/GHAPIDemo/GHGitHubObject.m; sourceTree = "<group>"; };
+		86D7D137173E360D00E2A2D1 /* GHGitHubOrg.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GHGitHubOrg.h; path = vendor/GHAPIDemo/GHAPIDemo/GHGitHubOrg.h; sourceTree = "<group>"; };
+		86D7D138173E360D00E2A2D1 /* GHGitHubOrg.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GHGitHubOrg.m; path = vendor/GHAPIDemo/GHAPIDemo/GHGitHubOrg.m; sourceTree = "<group>"; };
+		86D7D139173E360D00E2A2D1 /* GHGitHubTeam.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GHGitHubTeam.h; path = vendor/GHAPIDemo/GHAPIDemo/GHGitHubTeam.h; sourceTree = "<group>"; };
+		86D7D13A173E360D00E2A2D1 /* GHGitHubTeam.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GHGitHubTeam.m; path = vendor/GHAPIDemo/GHAPIDemo/GHGitHubTeam.m; sourceTree = "<group>"; };
+		86D7D13B173E360D00E2A2D1 /* GHGitHubUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GHGitHubUser.h; path = vendor/GHAPIDemo/GHAPIDemo/GHGitHubUser.h; sourceTree = "<group>"; };
+		86D7D13C173E360D00E2A2D1 /* GHGitHubUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GHGitHubUser.m; path = vendor/GHAPIDemo/GHAPIDemo/GHGitHubUser.m; sourceTree = "<group>"; };
+		86D7D143173E366A00E2A2D1 /* AFHTTPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AFHTTPClient.h; path = vendor/GHAPIDemo/external/AFNetworking/AFNetworking/AFHTTPClient.h; sourceTree = "<group>"; };
+		86D7D144173E366A00E2A2D1 /* AFHTTPClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AFHTTPClient.m; path = vendor/GHAPIDemo/external/AFNetworking/AFNetworking/AFHTTPClient.m; sourceTree = "<group>"; };
+		86D7D145173E366A00E2A2D1 /* AFHTTPRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AFHTTPRequestOperation.h; path = vendor/GHAPIDemo/external/AFNetworking/AFNetworking/AFHTTPRequestOperation.h; sourceTree = "<group>"; };
+		86D7D146173E366A00E2A2D1 /* AFHTTPRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AFHTTPRequestOperation.m; path = vendor/GHAPIDemo/external/AFNetworking/AFNetworking/AFHTTPRequestOperation.m; sourceTree = "<group>"; };
+		86D7D147173E366A00E2A2D1 /* AFImageRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AFImageRequestOperation.h; path = vendor/GHAPIDemo/external/AFNetworking/AFNetworking/AFImageRequestOperation.h; sourceTree = "<group>"; };
+		86D7D148173E366A00E2A2D1 /* AFImageRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AFImageRequestOperation.m; path = vendor/GHAPIDemo/external/AFNetworking/AFNetworking/AFImageRequestOperation.m; sourceTree = "<group>"; };
+		86D7D149173E366A00E2A2D1 /* AFJSONRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AFJSONRequestOperation.h; path = vendor/GHAPIDemo/external/AFNetworking/AFNetworking/AFJSONRequestOperation.h; sourceTree = "<group>"; };
+		86D7D14A173E366A00E2A2D1 /* AFJSONRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AFJSONRequestOperation.m; path = vendor/GHAPIDemo/external/AFNetworking/AFNetworking/AFJSONRequestOperation.m; sourceTree = "<group>"; };
+		86D7D14D173E366A00E2A2D1 /* AFNetworkActivityIndicatorManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AFNetworkActivityIndicatorManager.h; path = vendor/GHAPIDemo/external/AFNetworking/AFNetworking/AFNetworkActivityIndicatorManager.h; sourceTree = "<group>"; };
+		86D7D14E173E366A00E2A2D1 /* AFNetworkActivityIndicatorManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AFNetworkActivityIndicatorManager.m; path = vendor/GHAPIDemo/external/AFNetworking/AFNetworking/AFNetworkActivityIndicatorManager.m; sourceTree = "<group>"; };
+		86D7D14F173E366A00E2A2D1 /* AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AFNetworking.h; path = vendor/GHAPIDemo/external/AFNetworking/AFNetworking/AFNetworking.h; sourceTree = "<group>"; };
+		86D7D150173E366A00E2A2D1 /* AFPropertyListRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AFPropertyListRequestOperation.h; path = vendor/GHAPIDemo/external/AFNetworking/AFNetworking/AFPropertyListRequestOperation.h; sourceTree = "<group>"; };
+		86D7D151173E366A00E2A2D1 /* AFPropertyListRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AFPropertyListRequestOperation.m; path = vendor/GHAPIDemo/external/AFNetworking/AFNetworking/AFPropertyListRequestOperation.m; sourceTree = "<group>"; };
+		86D7D152173E366A00E2A2D1 /* AFURLConnectionOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AFURLConnectionOperation.h; path = vendor/GHAPIDemo/external/AFNetworking/AFNetworking/AFURLConnectionOperation.h; sourceTree = "<group>"; };
+		86D7D153173E366A00E2A2D1 /* AFURLConnectionOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AFURLConnectionOperation.m; path = vendor/GHAPIDemo/external/AFNetworking/AFNetworking/AFURLConnectionOperation.m; sourceTree = "<group>"; };
+		86D7D154173E366A00E2A2D1 /* AFXMLRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AFXMLRequestOperation.h; path = vendor/GHAPIDemo/external/AFNetworking/AFNetworking/AFXMLRequestOperation.h; sourceTree = "<group>"; };
+		86D7D155173E366A00E2A2D1 /* AFXMLRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AFXMLRequestOperation.m; path = vendor/GHAPIDemo/external/AFNetworking/AFNetworking/AFXMLRequestOperation.m; sourceTree = "<group>"; };
+		86D7D156173E366A00E2A2D1 /* UIImageView+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIImageView+AFNetworking.h"; path = "vendor/GHAPIDemo/external/AFNetworking/AFNetworking/UIImageView+AFNetworking.h"; sourceTree = "<group>"; };
+		86D7D157173E366A00E2A2D1 /* UIImageView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImageView+AFNetworking.m"; path = "vendor/GHAPIDemo/external/AFNetworking/AFNetworking/UIImageView+AFNetworking.m"; sourceTree = "<group>"; };
+		86D7D2EE173E385200E2A2D1 /* ReactiveCocoa.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ReactiveCocoa.xcodeproj; path = vendor/GHAPIDemo/external/ReactiveCocoa/ReactiveCocoaFramework/ReactiveCocoa.xcodeproj; sourceTree = "<group>"; };
+		86D7D2FF173E39FE00E2A2D1 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		86D7D301173E3A0A00E2A2D1 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		86D7D303173E3B6400E2A2D1 /* BBUProjectNavigator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBUProjectNavigator.h; sourceTree = "<group>"; };
+		86D7D304173E3B6400E2A2D1 /* BBUProjectNavigator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBUProjectNavigator.m; sourceTree = "<group>"; };
+		86D7D30A173E3C9100E2A2D1 /* EXTScope.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EXTScope.h; path = vendor/GHAPIDemo/external/ReactiveCocoa/ReactiveCocoaFramework/ReactiveCocoa/libextobjc/extobjc/EXTScope.h; sourceTree = "<group>"; };
+		86D7D30B173E3C9100E2A2D1 /* EXTScope.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EXTScope.m; path = vendor/GHAPIDemo/external/ReactiveCocoa/ReactiveCocoaFramework/ReactiveCocoa/libextobjc/extobjc/EXTScope.m; sourceTree = "<group>"; };
+		86D7D30D173E3D1F00E2A2D1 /* BBUFileListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBUFileListViewController.h; sourceTree = "<group>"; };
+		86D7D30E173E3D2000E2A2D1 /* BBUFileListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBUFileListViewController.m; sourceTree = "<group>"; };
+		86D7D310173E3FA700E2A2D1 /* BBUGitHubRepo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBUGitHubRepo.h; sourceTree = "<group>"; };
+		86D7D311173E3FA800E2A2D1 /* BBUGitHubRepo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBUGitHubRepo.m; sourceTree = "<group>"; };
+		86D7D315173E43C700E2A2D1 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MBProgressHUD.h; path = vendor/MBProgressHUD/MBProgressHUD.h; sourceTree = "<group>"; };
+		86D7D316173E43C700E2A2D1 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MBProgressHUD.m; path = vendor/MBProgressHUD/MBProgressHUD.m; sourceTree = "<group>"; };
+		86D7D319173E463D00E2A2D1 /* Helpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Helpers.h; path = vendor/Chromatism/Chromatism/Helpers.h; sourceTree = "<group>"; };
+		86D7D31A173E463D00E2A2D1 /* Helpers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Helpers.m; path = vendor/Chromatism/Chromatism/Helpers.m; sourceTree = "<group>"; };
+		86D7D31B173E463D00E2A2D1 /* JLTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JLTextView.h; path = vendor/Chromatism/Chromatism/JLTextView.h; sourceTree = "<group>"; };
+		86D7D31C173E463D00E2A2D1 /* JLTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JLTextView.m; path = vendor/Chromatism/Chromatism/JLTextView.m; sourceTree = "<group>"; };
+		86D7D31D173E463D00E2A2D1 /* JLTokenizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JLTokenizer.h; path = vendor/Chromatism/Chromatism/JLTokenizer.h; sourceTree = "<group>"; };
+		86D7D31E173E463D00E2A2D1 /* JLTokenizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JLTokenizer.m; path = vendor/Chromatism/Chromatism/JLTokenizer.m; sourceTree = "<group>"; };
+		86D7D31F173E463D00E2A2D1 /* TextLineCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TextLineCell.h; path = vendor/Chromatism/Chromatism/TextLineCell.h; sourceTree = "<group>"; };
+		86D7D320173E463D00E2A2D1 /* TextLineCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TextLineCell.m; path = vendor/Chromatism/Chromatism/TextLineCell.m; sourceTree = "<group>"; };
+		86D7D325173E464900E2A2D1 /* Menlo.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = Menlo.ttf; path = vendor/Chromatism/Chromatism/Menlo.ttf; sourceTree = "<group>"; };
+		86D7D327173E465B00E2A2D1 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
+		86D7D329173E46A100E2A2D1 /* BBUCodeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBUCodeViewController.h; sourceTree = "<group>"; };
+		86D7D32A173E46A100E2A2D1 /* BBUCodeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBUCodeViewController.m; sourceTree = "<group>"; };
+		86D7D32C173E4A4900E2A2D1 /* BBUFilesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBUFilesViewController.h; sourceTree = "<group>"; };
+		86D7D32D173E4A4A00E2A2D1 /* BBUFilesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBUFilesViewController.m; sourceTree = "<group>"; };
+		86D7D32F173E500A00E2A2D1 /* UIAlertView+BBU.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertView+BBU.h"; sourceTree = "<group>"; };
+		86D7D330173E500A00E2A2D1 /* UIAlertView+BBU.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertView+BBU.m"; sourceTree = "<group>"; };
+		86D7D332173E511E00E2A2D1 /* BBUGitHubTreeNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBUGitHubTreeNode.h; sourceTree = "<group>"; };
+		86D7D333173E511F00E2A2D1 /* BBUGitHubTreeNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBUGitHubTreeNode.m; sourceTree = "<group>"; };
+		86D7D336173E558900E2A2D1 /* Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Base64.h; path = vendor/Base64/Base64/Base64.h; sourceTree = "<group>"; };
+		86D7D337173E558900E2A2D1 /* Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Base64.m; path = vendor/Base64/Base64/Base64.m; sourceTree = "<group>"; };
+		86D7D339173E560000E2A2D1 /* BBUNotifications.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BBUNotifications.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +158,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				86D7D328173E465B00E2A2D1 /* CoreText.framework in Frameworks */,
+				86D7D302173E3A0A00E2A2D1 /* MobileCoreServices.framework in Frameworks */,
+				86D7D300173E39FE00E2A2D1 /* SystemConfiguration.framework in Frameworks */,
+				86D7D2FE173E386700E2A2D1 /* libReactiveCocoa-iOS.a in Frameworks */,
 				86D7D111173E346500E2A2D1 /* UIKit.framework in Frameworks */,
 				86D7D113173E346500E2A2D1 /* Foundation.framework in Frameworks */,
 				86D7D115173E346500E2A2D1 /* CoreGraphics.framework in Frameworks */,
@@ -48,6 +179,7 @@
 				86D7D10E173E346500E2A2D1 /* Products */,
 				86D7D12D173E348C00E2A2D1 /* Resources */,
 				86D7D117173E346500E2A2D1 /* Supporting Files */,
+				86D7D131173E35B400E2A2D1 /* Third Party */,
 			);
 			sourceTree = "<group>";
 		};
@@ -63,7 +195,11 @@
 			isa = PBXGroup;
 			children = (
 				86D7D114173E346500E2A2D1 /* CoreGraphics.framework */,
+				86D7D327173E465B00E2A2D1 /* CoreText.framework */,
 				86D7D112173E346500E2A2D1 /* Foundation.framework */,
+				86D7D301173E3A0A00E2A2D1 /* MobileCoreServices.framework */,
+				86D7D2EE173E385200E2A2D1 /* ReactiveCocoa.xcodeproj */,
+				86D7D2FF173E39FE00E2A2D1 /* SystemConfiguration.framework */,
 				86D7D110173E346500E2A2D1 /* UIKit.framework */,
 			);
 			name = Frameworks;
@@ -74,6 +210,21 @@
 			children = (
 				86D7D11F173E346500E2A2D1 /* BBUAppDelegate.h */,
 				86D7D120173E346500E2A2D1 /* BBUAppDelegate.m */,
+				86D7D329173E46A100E2A2D1 /* BBUCodeViewController.h */,
+				86D7D32A173E46A100E2A2D1 /* BBUCodeViewController.m */,
+				86D7D30D173E3D1F00E2A2D1 /* BBUFileListViewController.h */,
+				86D7D30E173E3D2000E2A2D1 /* BBUFileListViewController.m */,
+				86D7D32C173E4A4900E2A2D1 /* BBUFilesViewController.h */,
+				86D7D32D173E4A4A00E2A2D1 /* BBUFilesViewController.m */,
+				86D7D310173E3FA700E2A2D1 /* BBUGitHubRepo.h */,
+				86D7D311173E3FA800E2A2D1 /* BBUGitHubRepo.m */,
+				86D7D332173E511E00E2A2D1 /* BBUGitHubTreeNode.h */,
+				86D7D333173E511F00E2A2D1 /* BBUGitHubTreeNode.m */,
+				86D7D339173E560000E2A2D1 /* BBUNotifications.h */,
+				86D7D303173E3B6400E2A2D1 /* BBUProjectNavigator.h */,
+				86D7D304173E3B6400E2A2D1 /* BBUProjectNavigator.m */,
+				86D7D32F173E500A00E2A2D1 /* UIAlertView+BBU.h */,
+				86D7D330173E500A00E2A2D1 /* UIAlertView+BBU.m */,
 			);
 			path = SofaReview;
 			sourceTree = "<group>";
@@ -96,6 +247,115 @@
 			name = Resources;
 			sourceTree = "<group>";
 		};
+		86D7D131173E35B400E2A2D1 /* Third Party */ = {
+			isa = PBXGroup;
+			children = (
+				86D7D142173E365800E2A2D1 /* AFNetworking */,
+				86D7D335173E557600E2A2D1 /* Base64 */,
+				86D7D318173E460E00E2A2D1 /* Chromatism */,
+				86D7D132173E35C000E2A2D1 /* GitHub API */,
+				86D7D309173E3C6F00E2A2D1 /* libextobjc */,
+				86D7D314173E43B100E2A2D1 /* MBProgressHUD */,
+			);
+			name = "Third Party";
+			sourceTree = "<group>";
+		};
+		86D7D132173E35C000E2A2D1 /* GitHub API */ = {
+			isa = PBXGroup;
+			children = (
+				86D7D133173E360D00E2A2D1 /* GHGitHubClient.h */,
+				86D7D134173E360D00E2A2D1 /* GHGitHubClient.m */,
+				86D7D135173E360D00E2A2D1 /* GHGitHubObject.h */,
+				86D7D136173E360D00E2A2D1 /* GHGitHubObject.m */,
+				86D7D137173E360D00E2A2D1 /* GHGitHubOrg.h */,
+				86D7D138173E360D00E2A2D1 /* GHGitHubOrg.m */,
+				86D7D139173E360D00E2A2D1 /* GHGitHubTeam.h */,
+				86D7D13A173E360D00E2A2D1 /* GHGitHubTeam.m */,
+				86D7D13B173E360D00E2A2D1 /* GHGitHubUser.h */,
+				86D7D13C173E360D00E2A2D1 /* GHGitHubUser.m */,
+			);
+			name = "GitHub API";
+			sourceTree = "<group>";
+		};
+		86D7D142173E365800E2A2D1 /* AFNetworking */ = {
+			isa = PBXGroup;
+			children = (
+				86D7D143173E366A00E2A2D1 /* AFHTTPClient.h */,
+				86D7D144173E366A00E2A2D1 /* AFHTTPClient.m */,
+				86D7D145173E366A00E2A2D1 /* AFHTTPRequestOperation.h */,
+				86D7D146173E366A00E2A2D1 /* AFHTTPRequestOperation.m */,
+				86D7D147173E366A00E2A2D1 /* AFImageRequestOperation.h */,
+				86D7D148173E366A00E2A2D1 /* AFImageRequestOperation.m */,
+				86D7D149173E366A00E2A2D1 /* AFJSONRequestOperation.h */,
+				86D7D14A173E366A00E2A2D1 /* AFJSONRequestOperation.m */,
+				86D7D14D173E366A00E2A2D1 /* AFNetworkActivityIndicatorManager.h */,
+				86D7D14E173E366A00E2A2D1 /* AFNetworkActivityIndicatorManager.m */,
+				86D7D14F173E366A00E2A2D1 /* AFNetworking.h */,
+				86D7D150173E366A00E2A2D1 /* AFPropertyListRequestOperation.h */,
+				86D7D151173E366A00E2A2D1 /* AFPropertyListRequestOperation.m */,
+				86D7D152173E366A00E2A2D1 /* AFURLConnectionOperation.h */,
+				86D7D153173E366A00E2A2D1 /* AFURLConnectionOperation.m */,
+				86D7D154173E366A00E2A2D1 /* AFXMLRequestOperation.h */,
+				86D7D155173E366A00E2A2D1 /* AFXMLRequestOperation.m */,
+				86D7D156173E366A00E2A2D1 /* UIImageView+AFNetworking.h */,
+				86D7D157173E366A00E2A2D1 /* UIImageView+AFNetworking.m */,
+			);
+			name = AFNetworking;
+			sourceTree = "<group>";
+		};
+		86D7D2EF173E385200E2A2D1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				86D7D2F7173E385200E2A2D1 /* ReactiveCocoa.framework */,
+				86D7D2F9173E385200E2A2D1 /* libReactiveCocoa-iOS.a */,
+				86D7D2FB173E385200E2A2D1 /* ReactiveCocoaTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		86D7D309173E3C6F00E2A2D1 /* libextobjc */ = {
+			isa = PBXGroup;
+			children = (
+				86D7D30A173E3C9100E2A2D1 /* EXTScope.h */,
+				86D7D30B173E3C9100E2A2D1 /* EXTScope.m */,
+			);
+			name = libextobjc;
+			sourceTree = "<group>";
+		};
+		86D7D314173E43B100E2A2D1 /* MBProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				86D7D315173E43C700E2A2D1 /* MBProgressHUD.h */,
+				86D7D316173E43C700E2A2D1 /* MBProgressHUD.m */,
+			);
+			name = MBProgressHUD;
+			sourceTree = "<group>";
+		};
+		86D7D318173E460E00E2A2D1 /* Chromatism */ = {
+			isa = PBXGroup;
+			children = (
+				86D7D325173E464900E2A2D1 /* Menlo.ttf */,
+				86D7D319173E463D00E2A2D1 /* Helpers.h */,
+				86D7D31A173E463D00E2A2D1 /* Helpers.m */,
+				86D7D31B173E463D00E2A2D1 /* JLTextView.h */,
+				86D7D31C173E463D00E2A2D1 /* JLTextView.m */,
+				86D7D31D173E463D00E2A2D1 /* JLTokenizer.h */,
+				86D7D31E173E463D00E2A2D1 /* JLTokenizer.m */,
+				86D7D31F173E463D00E2A2D1 /* TextLineCell.h */,
+				86D7D320173E463D00E2A2D1 /* TextLineCell.m */,
+			);
+			name = Chromatism;
+			sourceTree = "<group>";
+		};
+		86D7D335173E557600E2A2D1 /* Base64 */ = {
+			isa = PBXGroup;
+			children = (
+				86D7D336173E558900E2A2D1 /* Base64.h */,
+				86D7D337173E558900E2A2D1 /* Base64.m */,
+			);
+			name = Base64;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -110,6 +370,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				86D7D2FD173E386100E2A2D1 /* PBXTargetDependency */,
 			);
 			name = SofaReview;
 			productName = SofaReview;
@@ -136,6 +397,12 @@
 			mainGroup = 86D7D104173E346500E2A2D1;
 			productRefGroup = 86D7D10E173E346500E2A2D1 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 86D7D2EF173E385200E2A2D1 /* Products */;
+					ProjectRef = 86D7D2EE173E385200E2A2D1 /* ReactiveCocoa.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				86D7D10C173E346500E2A2D1 /* SofaReview */,
@@ -143,11 +410,36 @@
 		};
 /* End PBXProject section */
 
+/* Begin PBXReferenceProxy section */
+		86D7D2F7173E385200E2A2D1 /* ReactiveCocoa.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = ReactiveCocoa.framework;
+			remoteRef = 86D7D2F6173E385200E2A2D1 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		86D7D2F9173E385200E2A2D1 /* libReactiveCocoa-iOS.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libReactiveCocoa-iOS.a";
+			remoteRef = 86D7D2F8173E385200E2A2D1 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		86D7D2FB173E385200E2A2D1 /* ReactiveCocoaTests.octest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = ReactiveCocoaTests.octest;
+			remoteRef = 86D7D2FA173E385200E2A2D1 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
 /* Begin PBXResourcesBuildPhase section */
 		86D7D10B173E346500E2A2D1 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				86D7D326173E464900E2A2D1 /* Menlo.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -160,10 +452,46 @@
 			files = (
 				86D7D11D173E346500E2A2D1 /* main.m in Sources */,
 				86D7D121173E346500E2A2D1 /* BBUAppDelegate.m in Sources */,
+				86D7D13D173E360D00E2A2D1 /* GHGitHubClient.m in Sources */,
+				86D7D13E173E360D00E2A2D1 /* GHGitHubObject.m in Sources */,
+				86D7D13F173E360D00E2A2D1 /* GHGitHubOrg.m in Sources */,
+				86D7D140173E360D00E2A2D1 /* GHGitHubTeam.m in Sources */,
+				86D7D141173E360D00E2A2D1 /* GHGitHubUser.m in Sources */,
+				86D7D158173E366A00E2A2D1 /* AFHTTPClient.m in Sources */,
+				86D7D159173E366A00E2A2D1 /* AFHTTPRequestOperation.m in Sources */,
+				86D7D15A173E366A00E2A2D1 /* AFImageRequestOperation.m in Sources */,
+				86D7D15B173E366A00E2A2D1 /* AFJSONRequestOperation.m in Sources */,
+				86D7D15D173E366A00E2A2D1 /* AFNetworkActivityIndicatorManager.m in Sources */,
+				86D7D15E173E366A00E2A2D1 /* AFPropertyListRequestOperation.m in Sources */,
+				86D7D15F173E366A00E2A2D1 /* AFURLConnectionOperation.m in Sources */,
+				86D7D160173E366A00E2A2D1 /* AFXMLRequestOperation.m in Sources */,
+				86D7D161173E366A00E2A2D1 /* UIImageView+AFNetworking.m in Sources */,
+				86D7D305173E3B6400E2A2D1 /* BBUProjectNavigator.m in Sources */,
+				86D7D30C173E3C9100E2A2D1 /* EXTScope.m in Sources */,
+				86D7D30F173E3D2000E2A2D1 /* BBUFileListViewController.m in Sources */,
+				86D7D312173E3FA800E2A2D1 /* BBUGitHubRepo.m in Sources */,
+				86D7D317173E43C700E2A2D1 /* MBProgressHUD.m in Sources */,
+				86D7D321173E463D00E2A2D1 /* Helpers.m in Sources */,
+				86D7D322173E463D00E2A2D1 /* JLTextView.m in Sources */,
+				86D7D323173E463D00E2A2D1 /* JLTokenizer.m in Sources */,
+				86D7D324173E463D00E2A2D1 /* TextLineCell.m in Sources */,
+				86D7D32B173E46A100E2A2D1 /* BBUCodeViewController.m in Sources */,
+				86D7D32E173E4A4A00E2A2D1 /* BBUFilesViewController.m in Sources */,
+				86D7D331173E500B00E2A2D1 /* UIAlertView+BBU.m in Sources */,
+				86D7D334173E511F00E2A2D1 /* BBUGitHubTreeNode.m in Sources */,
+				86D7D338173E558900E2A2D1 /* Base64.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		86D7D2FD173E386100E2A2D1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "ReactiveCocoa-iOS";
+			targetProxy = 86D7D2FC173E386100E2A2D1 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		86D7D128173E346500E2A2D1 /* Debug */ = {
@@ -229,7 +557,9 @@
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SofaReview/SofaReview-Prefix.pch";
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/vendor/external/ReactiveCocoa/ReactiveCocoaFramework/";
 				INFOPLIST_FILE = "SofaReview/SofaReview-Info.plist";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -240,7 +570,9 @@
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SofaReview/SofaReview-Prefix.pch";
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/vendor/external/ReactiveCocoa/ReactiveCocoaFramework/";
 				INFOPLIST_FILE = "SofaReview/SofaReview-Info.plist";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};

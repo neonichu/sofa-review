@@ -7,14 +7,22 @@
 //
 
 #import "BBUAppDelegate.h"
+#import "BBUCodeViewController.h"
+#import "BBUFileListViewController.h"
 
 @implementation BBUAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    UINavigationController* fileNavigation = [[UINavigationController alloc]
+                                              initWithRootViewController:[BBUFileListViewController new]];
+    
+    UISplitViewController* splitVC = [UISplitViewController new];
+    splitVC.viewControllers = @[ fileNavigation, [BBUCodeViewController new] ];
+    
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
+    self.window.rootViewController = splitVC;
     [self.window makeKeyAndVisible];
     return YES;
 }
