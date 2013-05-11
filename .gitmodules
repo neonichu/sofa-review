@@ -13,3 +13,6 @@
 [submodule "vendor/SignatureDemo"]
 	path = vendor/SignatureDemo
 	url = https://github.com/jharwig/SignatureDemo.git
+[submodule "vendor/CMPopTipView"]
+	path = vendor/CMPopTipView
+	url = https://github.com/chrismiles/CMPopTipView.git

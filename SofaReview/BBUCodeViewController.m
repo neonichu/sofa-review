@@ -15,6 +15,7 @@
 #import "BBUCodeViewController.h"
 #import "BBUGitHubRepo.h"
 #import "BBUGitHubTreeNode.h"
+#import "CMPopTipView.h"
 #import "JLTextView.h"
 #import "NICSignatureView.h"
 #import "NICSignatureViewQuartzQuadratic.h"
@@ -23,9 +24,11 @@ NSString* const kBBUSourceCodeTextReceivedNotification = @"BBUSourceCodeTextRece
 NSString* const kCode = @"Code";
 NSString* const kTreeNode = @"TreeNode";
 
-@interface BBUCodeViewController () <MFMailComposeViewControllerDelegate>
+@interface BBUCodeViewController () <MFMailComposeViewControllerDelegate, UIAlertViewDelegate>
 
+@property (nonatomic, strong) NSMutableArray* commentViews;
 @property (nonatomic, readonly) NSURL* highlightedSelectionURL;
+@property (nonatomic, assign) CGRect lastMenuFrame;
 @property (nonatomic, strong) BBUGitHubTreeNode* node;
 @property (nonatomic, readonly) NSInteger selectionEndLine;
 @property (nonatomic, readonly) NSInteger selectionStartLine;
@@ -43,6 +46,19 @@ NSString* const kTreeNode = @"TreeNode";
 }
 
 -(void)comment:(id)sender {
+    UIMenuController* menu = [UIMenuController sharedMenuController];
+    self.lastMenuFrame = menu.menuFrame;
+    
+    UITextRange* selectedRange = [self.textView selectedTextRange];
+    self.lastMenuFrame = [self.textView caretRectForPosition:selectedRange.start];
+    
+    UIAlertView* alertView = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Comment", nil)
+                                                        message:nil
+                                                       delegate:self
+                                              cancelButtonTitle:NSLocalizedString(@"Cancel", nil)
+                                              otherButtonTitles:NSLocalizedString(@"Add", nil), nil];
+    alertView.alertViewStyle = UIAlertViewStylePlainTextInput;
+    [alertView show];
 }
 
 -(void)highlight:(id)sender {
@@ -99,6 +115,7 @@ NSString* const kTreeNode = @"TreeNode";
 -(id)init {
     self = [super init];
     if (self) {
+        self.commentViews = [NSMutableArray new];
         self.navigationItem.title = NSLocalizedString(@"No file", nil);
     }
     return self;
@@ -153,9 +170,7 @@ NSString* const kTreeNode = @"TreeNode";
                                                       self.node = note.userInfo[kTreeNode];
                                                       
                                                       NSString* code = note.userInfo[kCode];
-                                                      // Makes no sense to do this anyways...
-                                                      [self.textView performSelectorOnMainThread:@selector(setText:)
-                                                                                      withObject:code waitUntilDone:NO];
+                                                      [self setCode:code];
                                                       
                                                       self.navigationItem.title = self.node.path;
                                                       
@@ -184,6 +199,11 @@ NSString* const kTreeNode = @"TreeNode";
 
 -(void)setCode:(NSString *)code {
     self.textView.text = code;
+    
+    for (UIView* commentView in self.commentViews) {
+        [commentView removeFromSuperview];
+    }
+    [self.commentViews removeAllObjects];
 }
 
 #pragma mark - GitHub browser actions
@@ -195,6 +215,26 @@ NSString* const kTreeNode = @"TreeNode";
 
 -(void)showCurrentSelectionOnGitHub {
     [[UIApplication sharedApplication] openURL:self.highlightedSelectionURL];
+}
+
+#pragma mark - UIAlertView delegate methods
+
+-(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
+    if (buttonIndex > 0) {
+        UITextField* commentField = [alertView textFieldAtIndex:0];
+        UIView* rootView = self.view;
+        
+        UIView* dummyView = [[UIView alloc] initWithFrame:self.lastMenuFrame];
+        dummyView.backgroundColor = [UIColor clearColor];
+        dummyView.userInteractionEnabled = NO;
+        [rootView addSubview:dummyView];
+        
+        CMPopTipView* popTip = [[CMPopTipView alloc] initWithMessage:commentField.text];
+        [popTip presentPointingAtView:dummyView inView:rootView animated:YES];
+        
+        [self.commentViews addObject:dummyView];
+        [self.commentViews addObject:popTip];
+    }
 }
 
 #pragma mark - MFMailComposeViewController delegate methods

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		869D3CF8173E8E5900877D85 /* CMPopTipView.m in Sources */ = {isa = PBXBuildFile; fileRef = 869D3CF7173E8E5900877D85 /* CMPopTipView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		86D7D111173E346500E2A2D1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86D7D110173E346500E2A2D1 /* UIKit.framework */; };
 		86D7D113173E346500E2A2D1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86D7D112173E346500E2A2D1 /* Foundation.framework */; };
 		86D7D115173E346500E2A2D1 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86D7D114173E346500E2A2D1 /* CoreGraphics.framework */; };
@@ -94,6 +95,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		869D3CF6173E8E5900877D85 /* CMPopTipView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CMPopTipView.h; path = vendor/CMPopTipView/CMPopTipView/CMPopTipView.h; sourceTree = "<group>"; };
+		869D3CF7173E8E5900877D85 /* CMPopTipView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CMPopTipView.m; path = vendor/CMPopTipView/CMPopTipView/CMPopTipView.m; sourceTree = "<group>"; };
 		86D7D10D173E346500E2A2D1 /* SofaReview.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SofaReview.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		86D7D110173E346500E2A2D1 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		86D7D112173E346500E2A2D1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -208,6 +211,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		869D3CF5173E8E4000877D85 /* CMPopTipView */ = {
+			isa = PBXGroup;
+			children = (
+				869D3CF6173E8E5900877D85 /* CMPopTipView.h */,
+				869D3CF7173E8E5900877D85 /* CMPopTipView.m */,
+			);
+			name = CMPopTipView;
+			sourceTree = "<group>";
+		};
 		86D7D104173E346500E2A2D1 = {
 			isa = PBXGroup;
 			children = (
@@ -304,6 +316,7 @@
 				86D7D142173E365800E2A2D1 /* AFNetworking */,
 				86D7D335173E557600E2A2D1 /* Base64 */,
 				86D7D318173E460E00E2A2D1 /* Chromatism */,
+				869D3CF5173E8E4000877D85 /* CMPopTipView */,
 				86D7D132173E35C000E2A2D1 /* GitHub API */,
 				86D7D309173E3C6F00E2A2D1 /* libextobjc */,
 				86D7D314173E43B100E2A2D1 /* MBProgressHUD */,
@@ -554,6 +567,7 @@
 				86D7D33F173E725C00E2A2D1 /* NICSignatureView.m in Sources */,
 				86D7D346173E743700E2A2D1 /* NICSignatureViewQuartzQuadratic.m in Sources */,
 				86D7D35B173E7F1A00E2A2D1 /* BBUGitHubTreeOwner.m in Sources */,
+				869D3CF8173E8E5900877D85 /* CMPopTipView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
