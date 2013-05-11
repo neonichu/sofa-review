@@ -28,9 +28,9 @@ static NSString* const kCellId = @"FileCell";
 -(id)initWithTreeOwner:(BBUGitHubTreeOwner*)treeOwner {
     self = [super initWithStyle:UITableViewStylePlain];
     if (self) {
-        self.navigationItem.title = NSLocalizedString(@"Files", nil);
-        
         self.treeOwner = treeOwner;
+        
+        self.navigationItem.title = self.treeOwner.canonicalName;
         
         [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:kCellId];
     }
