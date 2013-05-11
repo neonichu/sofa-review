@@ -92,8 +92,12 @@ NSString* const kTreeNode = @"TreeNode";
                                    }];
         
         [self.signatureView removeFromSuperview];
+        
+        self.textView.scrollEnabled = YES;
         return;
     }
+    
+    self.textView.scrollEnabled = NO;
     
 #if 0 // GL view had white background
     NICSignatureView* signatureView = [[NICSignatureView alloc] initWithFrame:self.view.frame context:nil];
