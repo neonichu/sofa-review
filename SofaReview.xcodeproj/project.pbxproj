@@ -10,12 +10,8 @@
 		86D7D111173E346500E2A2D1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86D7D110173E346500E2A2D1 /* UIKit.framework */; };
 		86D7D113173E346500E2A2D1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86D7D112173E346500E2A2D1 /* Foundation.framework */; };
 		86D7D115173E346500E2A2D1 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86D7D114173E346500E2A2D1 /* CoreGraphics.framework */; };
-		86D7D11B173E346500E2A2D1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 86D7D119173E346500E2A2D1 /* InfoPlist.strings */; };
 		86D7D11D173E346500E2A2D1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 86D7D11C173E346500E2A2D1 /* main.m */; };
 		86D7D121173E346500E2A2D1 /* BBUAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 86D7D120173E346500E2A2D1 /* BBUAppDelegate.m */; };
-		86D7D123173E346500E2A2D1 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 86D7D122173E346500E2A2D1 /* Default.png */; };
-		86D7D125173E346500E2A2D1 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 86D7D124173E346500E2A2D1 /* Default@2x.png */; };
-		86D7D127173E346500E2A2D1 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 86D7D126173E346500E2A2D1 /* Default-568h@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,14 +20,10 @@
 		86D7D112173E346500E2A2D1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		86D7D114173E346500E2A2D1 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		86D7D118173E346500E2A2D1 /* SofaReview-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SofaReview-Info.plist"; sourceTree = "<group>"; };
-		86D7D11A173E346500E2A2D1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		86D7D11C173E346500E2A2D1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		86D7D11E173E346500E2A2D1 /* SofaReview-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SofaReview-Prefix.pch"; sourceTree = "<group>"; };
 		86D7D11F173E346500E2A2D1 /* BBUAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BBUAppDelegate.h; sourceTree = "<group>"; };
 		86D7D120173E346500E2A2D1 /* BBUAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BBUAppDelegate.m; sourceTree = "<group>"; };
-		86D7D122173E346500E2A2D1 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
-		86D7D124173E346500E2A2D1 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
-		86D7D126173E346500E2A2D1 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +46,8 @@
 				86D7D116173E346500E2A2D1 /* SofaReview */,
 				86D7D10F173E346500E2A2D1 /* Frameworks */,
 				86D7D10E173E346500E2A2D1 /* Products */,
+				86D7D12D173E348C00E2A2D1 /* Resources */,
+				86D7D117173E346500E2A2D1 /* Supporting Files */,
 			);
 			sourceTree = "<group>";
 		};
@@ -68,9 +62,9 @@
 		86D7D10F173E346500E2A2D1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				86D7D110173E346500E2A2D1 /* UIKit.framework */,
-				86D7D112173E346500E2A2D1 /* Foundation.framework */,
 				86D7D114173E346500E2A2D1 /* CoreGraphics.framework */,
+				86D7D112173E346500E2A2D1 /* Foundation.framework */,
+				86D7D110173E346500E2A2D1 /* UIKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -80,7 +74,6 @@
 			children = (
 				86D7D11F173E346500E2A2D1 /* BBUAppDelegate.h */,
 				86D7D120173E346500E2A2D1 /* BBUAppDelegate.m */,
-				86D7D117173E346500E2A2D1 /* Supporting Files */,
 			);
 			path = SofaReview;
 			sourceTree = "<group>";
@@ -88,15 +81,19 @@
 		86D7D117173E346500E2A2D1 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				86D7D118173E346500E2A2D1 /* SofaReview-Info.plist */,
-				86D7D119173E346500E2A2D1 /* InfoPlist.strings */,
 				86D7D11C173E346500E2A2D1 /* main.m */,
+				86D7D118173E346500E2A2D1 /* SofaReview-Info.plist */,
 				86D7D11E173E346500E2A2D1 /* SofaReview-Prefix.pch */,
-				86D7D122173E346500E2A2D1 /* Default.png */,
-				86D7D124173E346500E2A2D1 /* Default@2x.png */,
-				86D7D126173E346500E2A2D1 /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
+			path = SofaReview;
+			sourceTree = "<group>";
+		};
+		86D7D12D173E348C00E2A2D1 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -151,10 +148,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				86D7D11B173E346500E2A2D1 /* InfoPlist.strings in Resources */,
-				86D7D123173E346500E2A2D1 /* Default.png in Resources */,
-				86D7D125173E346500E2A2D1 /* Default@2x.png in Resources */,
-				86D7D127173E346500E2A2D1 /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -171,17 +164,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		86D7D119173E346500E2A2D1 /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				86D7D11A173E346500E2A2D1 /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		86D7D128173E346500E2A2D1 /* Debug */ = {
