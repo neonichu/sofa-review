@@ -10,3 +10,6 @@
 [submodule "vendor/Base64"]
 	path = vendor/Base64
 	url = https://github.com/nicklockwood/Base64.git
+[submodule "vendor/SignatureDemo"]
+	path = vendor/SignatureDemo
+	url = https://github.com/jharwig/SignatureDemo.git

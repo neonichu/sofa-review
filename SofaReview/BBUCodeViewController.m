@@ -6,13 +6,18 @@
 //  Copyright (c) 2013 Boris Bügling. All rights reserved.
 //
 
+#import <AssetsLibrary/AssetsLibrary.h>
 #import <MessageUI/MessageUI.h>
+#import <QuartzCore/QuartzCore.h>
+
 #import <objc/runtime.h>
 
 #import "BBUCodeViewController.h"
 #import "BBUGitHubRepo.h"
 #import "BBUGitHubTreeNode.h"
 #import "JLTextView.h"
+#import "NICSignatureView.h"
+#import "NICSignatureViewQuartzQuadratic.h"
 
 NSString* const kBBUSourceCodeTextReceivedNotification = @"BBUSourceCodeTextReceivedNotification";
 NSString* const kCode = @"Code";
@@ -24,6 +29,7 @@ NSString* const kTreeNode = @"TreeNode";
 @property (nonatomic, strong) BBUGitHubTreeNode* node;
 @property (nonatomic, readonly) NSInteger selectionEndLine;
 @property (nonatomic, readonly) NSInteger selectionStartLine;
+@property (nonatomic, strong) UIView* signatureView;
 @property (nonatomic, strong) JLTextView* textView;
 
 @end
@@ -49,6 +55,45 @@ NSString* const kTreeNode = @"TreeNode";
     [mailVC setMessageBody:[[self highlightedSelectionURL] description] isHTML:NO];
     [mailVC setSubject:[NSString stringWithFormat:@"%@: %@", self.node.repo.fullName, self.node.path]];
     [self presentViewController:mailVC animated:YES completion:nil];
+}
+
+-(void)scribble {
+    if (self.signatureView) {
+        // Make a screenshot first
+        UIGraphicsBeginImageContextWithOptions(self.view.frame.size, YES, 0.0f);
+        CGContextRef context = UIGraphicsGetCurrentContext();
+        [self.view.layer renderInContext:context];
+        UIImage *capturedScreen = UIGraphicsGetImageFromCurrentImageContext();
+        UIGraphicsEndImageContext();
+        
+        ALAssetsLibrary* assetLibrary = [ALAssetsLibrary new];
+        [assetLibrary writeImageToSavedPhotosAlbum:capturedScreen.CGImage
+                                          metadata:nil
+                                   completionBlock:^(NSURL *assetURL, NSError *error) {
+                                       if (!assetURL) {
+                                           NSLog(@"Could not save image: %@", error.localizedDescription);
+                                       }
+                                   }];
+        
+        [self.signatureView removeFromSuperview];
+        return;
+    }
+    
+#if 0 // GL view had white background
+    NICSignatureView* signatureView = [[NICSignatureView alloc] initWithFrame:self.view.frame context:nil];
+    signatureView.backgroundColor = [UIColor clearColor];
+    signatureView.drawableColorFormat = GLKViewDrawableColorFormatRGBA8888;
+    signatureView.opaque = NO;
+    [self.view addSubview:signatureView];
+    
+    self.signatureView = signatureView;
+#else
+    NICSignatureViewQuartzQuadratic* signatureView = [[NICSignatureViewQuartzQuadratic alloc] initWithFrame:self.view.frame];
+    signatureView.backgroundColor = [UIColor clearColor];
+    [self.view addSubview:signatureView];
+    
+    self.signatureView = signatureView;
+#endif
 }
 
 -(id)init {
@@ -113,6 +158,12 @@ NSString* const kTreeNode = @"TreeNode";
                                                                                       withObject:code waitUntilDone:NO];
                                                       
                                                       self.navigationItem.title = self.node.path;
+                                                      
+                                                      self.navigationItem.rightBarButtonItem =
+                                                      [[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"Scribble", nil)
+                                                                                       style:UIBarButtonItemStyleBordered
+                                                                                      target:self
+                                                                                      action:@selector(scribble)];
                                                   }];
 }
 

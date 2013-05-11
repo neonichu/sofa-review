@@ -77,7 +77,7 @@ static NSString* const kCellId = @"FileCell";
     
     [MBProgressHUD showHUDAddedTo:[UIApplication sharedApplication].keyWindow animated:YES];
     
-    NSLog(@"Fetching content for URL: %@", node.url);
+    //NSLog(@"Fetching content for URL: %@", node.url);
     
     [BBUGitHubRepo scheduleRequestWithURL:node.url
                               withSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
