@@ -6,9 +6,11 @@
 //  Copyright (c) 2013 Boris Bügling. All rights reserved.
 //
 
+#import <MessageUI/MessageUI.h>
 #import <objc/runtime.h>
 
 #import "BBUCodeViewController.h"
+#import "BBUGitHubRepo.h"
 #import "BBUGitHubTreeNode.h"
 #import "JLTextView.h"
 
@@ -16,7 +18,7 @@ NSString* const kBBUSourceCodeTextReceivedNotification = @"BBUSourceCodeTextRece
 NSString* const kCode = @"Code";
 NSString* const kTreeNode = @"TreeNode";
 
-@interface BBUCodeViewController ()
+@interface BBUCodeViewController () <MFMailComposeViewControllerDelegate>
 
 @property (nonatomic, readonly) NSURL* highlightedSelectionURL;
 @property (nonatomic, strong) BBUGitHubTreeNode* node;
@@ -42,7 +44,19 @@ NSString* const kTreeNode = @"TreeNode";
 }
 
 -(void)mail:(id)sender {
-    
+    MFMailComposeViewController* mailVC = [MFMailComposeViewController new];
+    mailVC.mailComposeDelegate = self;
+    [mailVC setMessageBody:[[self highlightedSelectionURL] description] isHTML:NO];
+    [mailVC setSubject:[NSString stringWithFormat:@"%@: %@", self.node.repo.fullName, self.node.path]];
+    [self presentViewController:mailVC animated:YES completion:nil];
+}
+
+-(id)init {
+    self = [super init];
+    if (self) {
+        self.navigationItem.title = NSLocalizedString(@"No file", nil);
+    }
+    return self;
 }
 
 - (void)loadView
@@ -56,10 +70,23 @@ NSString* const kTreeNode = @"TreeNode";
     
     // Too lazy to subclass :)
     IMP myIMP = imp_implementationWithBlock(^(id sself, SEL action, id sender) {
-        return (action == @selector(comment:) && action == @selector(highlight:));
+        if (action == @selector(comment:) && action == @selector(highlight:)) {
+            return YES;
+        }
+        if (action == @selector(mail:) && [MFMailComposeViewController canSendMail]) {
+            return YES;
+        }
+        
+        return NO;
     });
     Method m = class_getInstanceMethod([JLTextView class], @selector(canPerformAction:withSender:));
     method_setImplementation(m, myIMP);
+    
+    // FIXME: Worst hack ever - somehow mail: gets called on JLTextView so we add that...
+    myIMP = imp_implementationWithBlock(^(id sself, id sender) {
+        [self mail:sender];
+    });
+    class_addMethod([JLTextView class], @selector(mail:), myIMP, @encode(id));
     
     self.view = textView;
     self.textView = textView;
@@ -72,7 +99,7 @@ NSString* const kTreeNode = @"TreeNode";
                                                   action:@selector(mail:)];
     
     UIMenuController* menu = [UIMenuController sharedMenuController];
-    [menu setMenuItems:@[ highlight, comment ]];
+    [menu setMenuItems:@[ highlight, comment, mail ]];
     
     [[NSNotificationCenter defaultCenter] addObserverForName:kBBUSourceCodeTextReceivedNotification
                                                       object:nil
@@ -84,6 +111,8 @@ NSString* const kTreeNode = @"TreeNode";
                                                       // Makes no sense to do this anyways...
                                                       [self.textView performSelectorOnMainThread:@selector(setText:)
                                                                                       withObject:code waitUntilDone:NO];
+                                                      
+                                                      self.navigationItem.title = self.node.path;
                                                   }];
 }
 
@@ -115,6 +144,14 @@ NSString* const kTreeNode = @"TreeNode";
 
 -(void)showCurrentSelectionOnGitHub {
     [[UIApplication sharedApplication] openURL:self.highlightedSelectionURL];
+}
+
+#pragma mark - MFMailComposeViewController delegate methods
+
+-(void)mailComposeController:(MFMailComposeViewController *)controller
+         didFinishWithResult:(MFMailComposeResult)result
+                       error:(NSError *)error {
+    [controller dismissViewControllerAnimated:YES completion:nil];
 }
 
 @end

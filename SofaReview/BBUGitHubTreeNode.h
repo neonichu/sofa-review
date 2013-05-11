@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
+@class BBUGitHubRepo;
+
 typedef enum {
     GHTreeNodeType_Tree = 0,
     GHTreeNodeType_Blob = 1,
@@ -17,6 +19,7 @@ typedef enum {
 
 @property (nonatomic, strong) NSURL* commitURL;
 @property (nonatomic, strong) NSString* path;
+@property (nonatomic, strong) BBUGitHubRepo* repo;
 @property (nonatomic, assign) GHTreeNodeType type;
 @property (nonatomic, strong) NSURL* url;
 

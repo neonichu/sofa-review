@@ -85,6 +85,7 @@
                                                                   NSString* urlString = [NSString stringWithFormat:urlTemplate,
                                                                                          self.fullName, commitSha, node.path];
                                                                   node.commitURL = [NSURL URLWithString:urlString];
+                                                                  node.repo = self;
                                                               }
                                                               
                                                               block([nodes copy]);

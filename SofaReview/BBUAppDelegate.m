@@ -16,9 +16,11 @@
 {
     UINavigationController* fileNavigation = [[UINavigationController alloc]
                                               initWithRootViewController:[BBUFileListViewController new]];
+    UINavigationController* sourceNavigation = [[UINavigationController alloc]
+                                                initWithRootViewController:[BBUCodeViewController new]];
     
     UISplitViewController* splitVC = [UISplitViewController new];
-    splitVC.viewControllers = @[ fileNavigation, [BBUCodeViewController new] ];
+    splitVC.viewControllers = @[ fileNavigation, sourceNavigation ];
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.backgroundColor = [UIColor whiteColor];

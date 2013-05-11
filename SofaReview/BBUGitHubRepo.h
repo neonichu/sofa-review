@@ -21,6 +21,7 @@ typedef void(^BBURecvTreeBlock)(NSArray* treeNodes);
 -(id)initWithDictionary:(NSDictionary*)dictionary;
 
 -(NSURL*)avatarURL;
+-(NSString*)fullName;
 -(NSString*)name;
 -(NSURL*)treesURL;
 
