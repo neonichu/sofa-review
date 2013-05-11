@@ -6,7 +6,7 @@
 //  Copyright (c) 2013 Boris Bügling. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import "BBUGitHubTreeOwner.h"
 
 @class BBUGitHubRepo;
 
@@ -15,14 +15,10 @@ typedef enum {
     GHTreeNodeType_Blob = 1,
 } GHTreeNodeType;
 
-@interface BBUGitHubTreeNode : NSObject
+@interface BBUGitHubTreeNode : BBUGitHubTreeOwner
 
-@property (nonatomic, strong) NSURL* commitURL;
 @property (nonatomic, strong) NSString* path;
-@property (nonatomic, strong) BBUGitHubRepo* repo;
 @property (nonatomic, assign) GHTreeNodeType type;
 @property (nonatomic, strong) NSURL* url;
-
--(id)initWithDictionary:(NSDictionary*)dictionary;
 
 @end

@@ -7,8 +7,8 @@
 //
 
 #import "BBUFilesViewController.h"
-#import "BBUGitHubRepo.h"
 #import "BBUGitHubTreeNode.h"
+#import "BBUGitHubTreeOwner.h"
 #import "BBUNotifications.h"
 #import "MBProgressHUD.h"
 
@@ -16,8 +16,8 @@ static NSString* const kCellId = @"FileCell";
 
 @interface BBUFilesViewController ()
 
-@property (nonatomic, strong) BBUGitHubRepo* repo;
 @property (nonatomic, strong) NSArray* treeNodes;
+@property (nonatomic, strong) BBUGitHubTreeOwner* treeOwner;
 
 @end
 
@@ -25,12 +25,12 @@ static NSString* const kCellId = @"FileCell";
 
 @implementation BBUFilesViewController
 
--(id)initWithRepo:(BBUGitHubRepo*)repo {
+-(id)initWithTreeOwner:(BBUGitHubTreeOwner*)treeOwner {
     self = [super initWithStyle:UITableViewStylePlain];
     if (self) {
         self.navigationItem.title = NSLocalizedString(@"Files", nil);
         
-        self.repo = repo;
+        self.treeOwner = treeOwner;
         
         [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:kCellId];
     }
@@ -42,7 +42,7 @@ static NSString* const kCellId = @"FileCell";
     
     [MBProgressHUD showHUDAddedTo:[UIApplication sharedApplication].keyWindow animated:animated];
     
-    [self.repo fetchTreeForLatestCommitWithCompletionBlock:^(NSArray *treeNodes) {
+    [self.treeOwner fetchTreeWithCompletionBlock:^(NSArray *treeNodes) {
         [MBProgressHUD hideHUDForView:[UIApplication sharedApplication].keyWindow animated:animated];
         
         self.treeNodes = treeNodes;
@@ -60,14 +60,20 @@ static NSString* const kCellId = @"FileCell";
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell* cell = [tableView dequeueReusableCellWithIdentifier:kCellId forIndexPath:indexPath];
     
-    BBUGitHubTreeNode* node = self.treeNodes[indexPath.row];
-    cell.textLabel.text = node.path;
+    BBUGitHubTreeOwner* node = self.treeNodes[indexPath.row];
+    cell.textLabel.text = node.canonicalName;
     
     return cell;
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     BBUGitHubTreeNode* node = self.treeNodes[indexPath.row];
+    
+    if (node.type == GHTreeNodeType_Tree) {
+        BBUFilesViewController* filesVC = [[BBUFilesViewController alloc] initWithTreeOwner:node];
+        [self.navigationController pushViewController:filesVC animated:YES];
+        return;
+    }
     
     if (node.type != GHTreeNodeType_Blob) {
         UITableViewCell* cell = [tableView cellForRowAtIndexPath:indexPath];
@@ -79,30 +85,30 @@ static NSString* const kCellId = @"FileCell";
     
     //NSLog(@"Fetching content for URL: %@", node.url);
     
-    [BBUGitHubRepo scheduleRequestWithURL:node.url
-                              withSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
-                                  [MBProgressHUD hideHUDForView:[UIApplication sharedApplication].keyWindow animated:YES];
-                                  
-                                  NSString* encoding = responseObject[@"encoding"];
-                                  if (![encoding isEqualToString:@"base64"]) {
-                                      NSLog(@"Content isn't base64 encoded. Too bad.");
-                                      return;
-                                  }
-                                  
-                                  NSString* content = responseObject[@"content"];
-                                  content = [content base64DecodedString];
-                                  
-                                  if (!content) {
-                                      NSLog(@"No content, probably binary.");
-                                      return;
-                                  }
-                                  
-                                  [[NSNotificationCenter defaultCenter]
-                                   postNotificationName:kBBUSourceCodeTextReceivedNotification
-                                   object:nil userInfo:@{ kCode: content, kTreeNode: node }];
-                              } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-                                  [UIAlertView bbu_showAlertWithError:error];
-                              }];
+    [BBUGitHubTreeOwner scheduleRequestWithURL:node.url
+                                   withSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
+                                       [MBProgressHUD hideHUDForView:[UIApplication sharedApplication].keyWindow animated:YES];
+                                       
+                                       NSString* encoding = responseObject[@"encoding"];
+                                       if (![encoding isEqualToString:@"base64"]) {
+                                           NSLog(@"Content isn't base64 encoded. Too bad.");
+                                           return;
+                                       }
+                                       
+                                       NSString* content = responseObject[@"content"];
+                                       content = [content base64DecodedString];
+                                       
+                                       if (!content) {
+                                           NSLog(@"No content, probably binary.");
+                                           return;
+                                       }
+                                       
+                                       [[NSNotificationCenter defaultCenter]
+                                        postNotificationName:kBBUSourceCodeTextReceivedNotification
+                                        object:nil userInfo:@{ kCode: content, kTreeNode: node }];
+                                   } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+                                       [UIAlertView bbu_showAlertWithError:error];
+                                   }];
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {

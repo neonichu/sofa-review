@@ -8,10 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@class BBUGitHubRepo;
+@class BBUGitHubTreeOwner;
 
 @interface BBUFilesViewController : UITableViewController
 
--(id)initWithRepo:(BBUGitHubRepo*)repo;
+-(id)initWithTreeOwner:(BBUGitHubTreeOwner*)treeOwner;
 
 @end

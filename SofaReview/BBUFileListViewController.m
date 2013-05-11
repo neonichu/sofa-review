@@ -80,7 +80,7 @@ static NSString* const kCellId = @"RepoCell";
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     BBUGitHubRepo* repo = self.navigator.repos[indexPath.row];
-    BBUFilesViewController* filesVC = [[BBUFilesViewController alloc] initWithRepo:repo];
+    BBUFilesViewController* filesVC = [[BBUFilesViewController alloc] initWithTreeOwner:repo];
     [self.navigationController pushViewController:filesVC animated:YES];
 }
 

@@ -10,8 +10,20 @@
 
 @implementation BBUGitHubTreeNode
 
+-(NSString *)canonicalName {
+    return self.path;
+}
+
+-(void)fetchTreeWithCompletionBlock:(BBURecvTreeBlock)block {
+    if (self.type != GHTreeNodeType_Tree) {
+        return;
+    }
+    
+    [self fetchTreeWithURL:self.url completionBlock:block];
+}
+
 -(id)initWithDictionary:(NSDictionary*)dictionary {
-    self = [super init];
+    self = [super initWithDictionary:dictionary];
     if (self) {
         //NSLog(@"node: %@", dictionary);
         
@@ -20,6 +32,10 @@
         self.url = [NSURL URLWithString:dictionary[@"url"]];
     }
     return self;
+}
+
+-(Class)nodeClass {
+    return [BBUGitHubTreeNode class];
 }
 
 -(GHTreeNodeType)parseType:(NSString*)string {

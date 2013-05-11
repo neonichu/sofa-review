@@ -53,7 +53,7 @@ NSString* const kTreeNode = @"TreeNode";
     MFMailComposeViewController* mailVC = [MFMailComposeViewController new];
     mailVC.mailComposeDelegate = self;
     [mailVC setMessageBody:[[self highlightedSelectionURL] description] isHTML:NO];
-    [mailVC setSubject:[NSString stringWithFormat:@"%@: %@", self.node.repo.fullName, self.node.path]];
+    [mailVC setSubject:[NSString stringWithFormat:@"%@: %@", self.node.parent.canonicalName, self.node.path]];
     [self presentViewController:mailVC animated:YES completion:nil];
 }
 

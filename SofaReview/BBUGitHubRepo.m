@@ -59,46 +59,24 @@
                              }];
 }
 
--(void)fetchTreeForLatestCommitWithCompletionBlock:(BBURecvTreeBlock)block {
-    // https://github.com/jquery/jquery/blob/27291ff06ddb655f90a8d1eada71f7ac61499b12/src/css.js#L171-185
-    NSString* urlTemplate = @"https://github.com/%@/blob/%@/%@";
-    
+
+-(void)fetchTreeWithCompletionBlock:(BBURecvTreeBlock)block {
     [[self class] scheduleRequestWithURL:self.commitsURL
                              withSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
                                  NSDictionary* commit = responseObject[0][@"commit"];
-                                 NSString* treeURLString = commit[@"tree"][@"url"];
                                  
                                  // This seems silly
-                                 NSString* commitSha = [[commit[@"url"] componentsSeparatedByString:@"/"] lastObject];
+                                 self.commitSha = [[commit[@"url"] componentsSeparatedByString:@"/"] lastObject];
                                  
-                                 [[self class] scheduleRequestWithURL:[NSURL URLWithString:treeURLString]
-                                                          withSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
-                                                              //NSLog(@"tree: %@", responseObject);
-                                                              
-                                                              NSMutableArray* nodes = [NSMutableArray new];
-                                                              
-                                                              for (NSDictionary* treeNode in responseObject[@"tree"]) {
-                                                                  BBUGitHubTreeNode* node = [[BBUGitHubTreeNode alloc]
-                                                                                             initWithDictionary:treeNode];
-                                                                  [nodes addObject:node];
-                                                                  
-                                                                  NSString* urlString = [NSString stringWithFormat:urlTemplate,
-                                                                                         self.fullName, commitSha, node.path];
-                                                                  node.commitURL = [NSURL URLWithString:urlString];
-                                                                  node.repo = self;
-                                                              }
-                                                              
-                                                              block([nodes copy]);
-                                                          } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-                                                              [UIAlertView bbu_showAlertWithError:error];
-                                                          }];
+                                 [self fetchTreeWithURL:[NSURL URLWithString:commit[@"tree"][@"url"]] completionBlock:block];
                              } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
                                  [UIAlertView bbu_showAlertWithError:error];
                              }];
+     
 }
 
 -(id)initWithDictionary:(NSDictionary*)dictionary {
-    self = [super init];
+    self = [super initWithDictionary:dictionary];
     if (self) {
         self.commitsURL = [NSURL URLWithString:[self dropShaFromURLString:dictionary[@"commits_url"]]];
         self.fullName = dictionary[@"full_name"];
@@ -111,15 +89,14 @@
     return self;
 }
 
-#pragma mark - Helper
+#pragma mark -
 
-+(void)scheduleRequestWithURL:(NSURL*)url
-                  withSuccess:(void (^)(AFHTTPRequestOperation *operation, id responseObject))success
-                      failure:(void (^)(AFHTTPRequestOperation *operation, NSError *error))failure {
-    NSURLRequest* request = [NSURLRequest requestWithURL:url];
-    AFJSONRequestOperation* oper = [[AFJSONRequestOperation alloc] initWithRequest:request];
-    [oper setCompletionBlockWithSuccess:success failure:failure];
-    [[NSOperationQueue mainQueue] addOperation:oper];
+-(NSString *)canonicalName {
+    return self.fullName;
+}
+
+-(Class)nodeClass {
+    return [BBUGitHubTreeNode class];
 }
 
 @end
