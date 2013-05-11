@@ -92,6 +92,7 @@ NSString* const kTreeNode = @"TreeNode";
                                    }];
         
         [self.signatureView removeFromSuperview];
+        self.signatureView = nil;
         
         self.textView.scrollEnabled = YES;
         return;
