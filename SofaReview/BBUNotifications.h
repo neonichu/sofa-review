@@ -8,3 +8,4 @@
 
 extern NSString* const kBBUSourceCodeTextReceivedNotification;
 extern NSString* const kCode;
+extern NSString* const kTreeNode;

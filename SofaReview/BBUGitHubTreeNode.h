@@ -15,6 +15,7 @@ typedef enum {
 
 @interface BBUGitHubTreeNode : NSObject
 
+@property (nonatomic, strong) NSURL* commitURL;
 @property (nonatomic, strong) NSString* path;
 @property (nonatomic, assign) GHTreeNodeType type;
 @property (nonatomic, strong) NSURL* url;

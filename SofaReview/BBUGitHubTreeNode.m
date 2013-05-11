@@ -13,6 +13,8 @@
 -(id)initWithDictionary:(NSDictionary*)dictionary {
     self = [super init];
     if (self) {
+        //NSLog(@"node: %@", dictionary);
+        
         self.path = dictionary[@"path"];
         self.type = [self parseType:dictionary[@"type"]];
         self.url = [NSURL URLWithString:dictionary[@"url"]];

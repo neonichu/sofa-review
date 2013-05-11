@@ -99,7 +99,7 @@ static NSString* const kCellId = @"FileCell";
                                   
                                   [[NSNotificationCenter defaultCenter]
                                    postNotificationName:kBBUSourceCodeTextReceivedNotification
-                                   object:nil userInfo:@{ kCode: content }];
+                                   object:nil userInfo:@{ kCode: content, kTreeNode: node }];
                               } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
                                   [UIAlertView bbu_showAlertWithError:error];
                               }];
