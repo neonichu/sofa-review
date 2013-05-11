@@ -45,6 +45,10 @@ static NSString* const kCellId = @"RepoCell";
 }
 
 -(void)viewDidAppear:(BOOL)animated {
+    if (!self.navigator.loading) {
+        return;
+    }
+    
     [MBProgressHUD showHUDAddedTo:[UIApplication sharedApplication].keyWindow animated:YES];
 }
 

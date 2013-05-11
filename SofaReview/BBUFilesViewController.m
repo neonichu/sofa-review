@@ -40,6 +40,10 @@ static NSString* const kCellId = @"FileCell";
 -(void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
     
+    if (self.treeNodes.count > 0) {
+        return;
+    }
+    
     [MBProgressHUD showHUDAddedTo:[UIApplication sharedApplication].keyWindow animated:animated];
     
     [self.treeOwner fetchTreeWithCompletionBlock:^(NSArray *treeNodes) {
